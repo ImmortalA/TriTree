@@ -69,7 +69,8 @@ body {
   justify-content: center;
   align-items: center;
   /* Use a green placeholder image now */
-  background: url("https://via.placeholder.com/1920x600/008000/ffffff?text=TriTree+Hero") no-repeat center center/cover;
+  background-color: #449342;
+  
   height: 60vh;
   color: #fff;
   text-align: center;
