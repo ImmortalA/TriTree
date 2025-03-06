@@ -69,7 +69,7 @@ body {
   justify-content: center;
   align-items: center;
   /* Use a green placeholder image now */
-  background-color: #449342;
+  background-color: #02353c;
   
   height: 60vh;
   color: #fff;
@@ -102,7 +102,7 @@ body {
 }
 
 .btn:hover {
-  background-color: #006400; /* A darker green, changed from #005f99 */
+  background-color: #000; /
 }
 
 /* Page Header Section */
