@@ -75,9 +75,9 @@ body {
 }
 
 .hero-text {
-  background: rgba(0, 0, 0, 0.4);
+  background: none;
   padding: 2rem;
-  border-radius: 8px;
+  border-radius: 0;
 }
 
 .hero h1 {
