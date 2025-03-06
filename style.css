@@ -68,9 +68,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* Use a green placeholder image now */
   background-color: #02353c;
-  
   height: 60vh;
   color: #fff;
   text-align: center;
@@ -102,7 +100,7 @@ body {
 }
 
 .btn:hover {
-  background-color: #000; /
+  background-color: #000;
 }
 
 /* Page Header Section */
@@ -128,6 +126,116 @@ body {
 .content ul {
   margin-bottom: 1.5rem;
 }
+
+/* Faculty/People Section */
+.faculty-profile {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.faculty-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.faculty-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 800px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.faculty-image img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.faculty-info {
+  text-align: left;
+}
+
+.faculty-info h3 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.faculty-title {
+  font-style: italic;
+  color: gray;
+}
+
+.faculty-desc {
+  font-size: 1rem;
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a {
+  margin-right: 10px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #02353c;
+}
+
+/* Background & Research Section */
+.faculty-details {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  text-align: left;
+  max-width: 800px;
+}
+
+.faculty-background,
+.faculty-research {
+  width: 45%;
+}
+
+.faculty-research ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.faculty-research ul li {
+  margin-bottom: 8px;
+}
+
+.faculty-research ul li a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: normal;
+}
+
+.faculty-research ul li a:hover {
+  text-decoration: underline;
+}
+
+
+.faculty-divider {
+  border: none;
+  height: 2px; /* Makes the line thicker */
+  background-color: #02353c; /* Dark green color */
+  margin: 40px auto; /* Adds spacing above and below */
+  width: 90%; /* Ensures it stretches nicely */
+  opacity: 0.8; /* Slight transparency for a sleek look */
+}
+
 
 /* Contact Form */
 .contact-form {
@@ -188,5 +296,28 @@ body {
 
   .nav-toggle {
     display: inline-block;
+  }
+
+  /* Responsive Faculty Section */
+  .faculty-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .faculty-image img {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .faculty-details {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .faculty-background,
+  .faculty-research {
+    width: 100%;
+    margin-bottom: 20px;
   }
 }
