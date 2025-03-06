@@ -51,7 +51,7 @@ body {
 
 .nav-links a:hover,
 .nav-links a.active {
-  color: #008000; /* Changed from #007acc to green */
+  color: #02353c;
 }
 
 /* Mobile Nav Toggle (Hidden on Desktop) */
@@ -93,7 +93,7 @@ body {
 .btn {
   display: inline-block;
   padding: 0.7rem 1.2rem;
-  background-color: #008000; /* Changed from #007acc to green */
+  background-color: #02353c;
   color: #fff;
   text-decoration: none;
   border-radius: 4px;
@@ -106,7 +106,7 @@ body {
 
 /* Page Header Section */
 .page-header {
-  background-color: #008000; /* Changed from #007acc to green */
+  background-color: #02353c;
   color: #fff;
   padding: 2rem 1rem;
   text-align: center;
