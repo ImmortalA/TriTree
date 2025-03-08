@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Explores | TriTree Research Center</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" 
+    rel="stylesheet"
+  />
+  
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    .gallery-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    .gallery-container img {
+      width: 100%;
+      height: auto; /* Maintain aspect ratio */
+      object-fit: contain; /* Show entire image */
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+
+    .section-title {
+      margin-top: 40px;
+      margin-bottom: 20px;
+      font-size: 1.8rem;
+      text-align: center;
+      color: #02353c;
+    }
+  </style>
+</head>
+<body>
+  <header class="main-header">
+    <nav class="navbar">
+      <div class="logo">TriTree Research Center</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="people.html">People</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="explores.html" class="active">Explores</a></li>
+        <li><a href="blogs.html">Blogs</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" onclick="toggleNav()">☰</button>
+    </nav>
+  </header>
+
+  <section class="page-header">
+    <h1>Educational Insights & Gallery</h1>
+  </section>
+
+  <section class="content">
+    <h2>Our Educational Courses and Gallery</h2>
+    <p>Explore our educational courses, workshops, and visual insights into our research activities.</p>
+
+    <h2 class="section-title">Classroom Activities</h2>
+    <div class="gallery-container">
+      <img src="images\gallery\2025_Research\20250307_Classroom.png" alt="Classroom activity 1">
+      <img src="images\gallery\2025_Research\20250307_Classroom_02.png" alt="Classroom activity 2">
+      <!-- <img src="path-to-image3.jpg" alt="Classroom activity 3">
+      <img src="path-to-image4.jpg" alt="Classroom activity 4">
+      <img src="path-to-image5.jpg" alt="Classroom activity 5">
+      <img src="path-to-image6.jpg" alt="Classroom activity 6">
+      <img src="path-to-image7.jpg" alt="Classroom activity 7">
+      <img src="path-to-image8.jpg" alt="Classroom activity 8"> -->
+    </div>
+  </section>
+
+  <footer class="main-footer">
+    <p>&copy; <span id="year"></span> TriTree Research Center. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
