@@ -180,6 +180,7 @@ body {
   font-size: 1rem;
   margin-top: 10px;
   line-height: 1.5;
+  text-align: justify
 }
 
 .social-icons {
@@ -205,6 +206,7 @@ body {
 .faculty-background,
 .faculty-research {
   width: 45%;
+  text-align: left;
 }
 
 .faculty-research ul {
