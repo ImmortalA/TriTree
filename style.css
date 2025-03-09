@@ -206,7 +206,7 @@ body {
 .faculty-background,
 .faculty-research {
   width: 45%;
-  text-align: left;
+  text-align: justify;
 }
 
 .faculty-research ul {
