@@ -1,165 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>People | TriTree Research Center</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 
-  <!-- Font Awesome for Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    .profile-photo {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+      border: 3px solid #10B981; /* Technology green */
+    }
 
-  <link rel="stylesheet" href="style.css" />
+    .card-container {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .card {
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      display: flex;
+      align-items: flex-start;
+      gap: 2rem;
+    }
+
+    .card-content {
+      text-align: left;
+    }
+
+    .card h3 {
+      margin-bottom: 0.5rem;
+    }
+
+    .card p {
+      text-align: left;
+      margin-bottom: 0.6rem;
+      color: #374151;
+      font-size: 0.95rem;
+    }
+
+    .card ul {
+      list-style: disc;
+      padding-left: 1.5rem;
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+      color: #374151;
+      font-size: 0.95rem;
+    }
+  </style>
 </head>
-
 <body>
-  <!-- Navigation Bar -->
-  <header class="main-header">
+
+  <!-- Navigation -->
+  <header>
     <nav class="navbar">
-      <div class="logo">TriTree Research Center</div>
+      <div class="logo">TriTree</div>
       <ul class="nav-links" id="navLinks">
         <li><a href="index.html">Home</a></li>
-        <li><a href="people.html">People</a></li>
+        <li><a href="people.html" class="active">People</a></li>
         <li><a href="publications.html">Publications</a></li>
-        <li><a href="explores.html" class="active">Explores</a></li>
+        <li><a href="explores.html">Explores</a></li>
         <li><a href="blogs.html">Blogs</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
-      <button class="nav-toggle" id="navToggle" onclick="toggleNav()">☰</button>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu">☰</button>
     </nav>
   </header>
 
-  <!-- Page Header -->
-  <section class="page-header">
-    <h1>Meet the People</h1>
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Meet Our Team</h1>
+    <p>TriTree brings together researchers, engineers, and educators to grow ideas into reality.</p>
   </section>
 
-  <!-- Faculty/People Section -->
-  <section class="faculty-profile">
+  <!-- Team Section -->
+  <section>
     <h2>Our Team</h2>
+    <div class="card-container">
 
-    <div class="faculty-container">
-      <!-- Faculty Member 1 -->
-      <div class="faculty-card">
-        <div class="faculty-image">
-          <img src="images/faculty/faculty_soe_min_htet.jpg" alt="Soe Min Htet">
-        </div>
-        <div class="faculty-info">
-          <h3>Soe Min <strong>Htet</strong></h3>
-          <!-- <p class="faculty-title">(Chair)</p> -->
-          <p class="faculty-desc">
-            Soe Min Htet, recognized for academic excellence as a member of the Phi Tau Phi Scholastic Honor Society
-            of the Republic of China, specializes in electric motor optimization, sustainable engineering, and artificial
-            intelligence. He devises methods to enhance electric motor efficiency and reliability, focusing on sustainable
-            transportation solutions and predictive maintenance. By integrating advanced fuzzy logic, machine learning, and
-            Taguchi approaches, he streamlines BLDC motor performance for applications ranging from electric vehicles to
-            industrial machinery. This work helps reduce energy consumption, extend equipment lifespans, and lower maintenance
-            costs in real-world settings.
-          </p>
-
-          <p class="faculty-desc">
-            Currently, he is developing AI-driven fault detection systems that alert users to potential breakdowns before
-            they occur, ensuring safer and more efficient operations. Beyond his own research, Soe Min Htet provides hands-on
-            mentorship to budding scientists, involving them in real-world engineering projects and guiding them toward
-            meaningful academic and professional growth. Through these initiatives, he actively fosters the next generation
-            of innovators, shaping a more sustainable and technologically advanced future.
-          </p>
-
-          <div class="social-icons">
-            <a href="#"><i class="fas fa-envelope"></i></a>
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fas fa-home"></i></a>
-            <a href="#"><i class="fas fa-graduation-cap"></i></a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Background and Research -->
-      <div class="faculty-details">
-        <div class="faculty-background">
-          <h3>Background and Profile</h3>
-          <p><strong>Ph.D</strong> candidate in Electrical Engineering, Tatung University, Taiwan</p>
-          <p><strong>M.S.</strong> in Electrical Engineering, Tatung University, Taiwan</p>
-          <p><strong>B.E.</strong> in Electrical Power, West Yangon Technological University, Myanmar</p>
-        </div>
-
-        <div class="faculty-research">
-          <h3>Research Group Affiliations</h3>
+      <div class="card">
+        <img src="images/faculty/faculty_soe_min_htet.jpg" alt="Soe Min Htet" class="profile-photo">
+        <div class="card-content">
+          <h3>Soe Min Htet</h3>
+          <p><strong>Research Scientist</strong></p>
+          <p>Specializing in electric motor optimization and sustainable energy systems.</p>
+          <p><strong>Background:</strong></p>
           <ul>
-            <li><a href="#">TriTree Research Center</a></li>
-            <!-- <li><a href="#">ABC</a></li> -->
+            <li>Ph.D. Student — Electrical Engineering, Tatung University, Taiwan</li>
+            <li>M.S. — Electrical Engineering, Tatung University, Taiwan</li>
+            <li>B.S. — Electrical Power, West Yangon Technological University, Myanmar</li>
           </ul>
-        </div>
-
-      </div>
-      <!-- Divider Line -->
-      <hr class="faculty-divider">
-
-      <!-- Faculty Member 2 -->
-      <div class="faculty-card">
-        <div class="faculty-image">
-          <img src="images/faculty/faculty_duc_anh_tran.jpg" alt="Anh Duc Tran">
-        </div>
-        <div class="faculty-info">
-          <h3>Anh Duc <strong>Tran</strong></h3>
-          <!-- <p class="faculty-title">(Chair)</p> -->
-          <p class="faculty-desc">
-            Blending expertise in AI, robotics, and education, Duc Anh is dedicated to advancing intelligent
-            robotic systems while fostering the next generation of engineers and researchers. His work explores
-            robotic autonomy and AI-driven decision-making, focusing on how intelligent systems perceive, plan,
-            and interact with dynamic environments. As part of the Dynamic and Autonomous Robotic Systems Lab, his
-            contribute to cutting-edge developments in robotics and artificial intelligence.
-          </p>
-
-          <p class="faculty-desc">
-            Equally passionate about education, Duc Anh designs advanced SAT subject courses and mentors high school
-            students in research, helping them navigate the intersection of AI, robotics, and problem-solving.
-            His work in education aims to equip students with both the technical skills and analytical mindset necessary
-            to excel in academia and the tech industry.
-          </p>
-
-          <p class="faculty-desc">
-            Through research and mentorship, Duc Anh strives to create a meaningful impact by pushing the boundaries of
-            intelligent robotics while inspiring and guiding future innovators.
-          </p>
-
-          <div class="social-icons">
-            <a href="#"><i class="fas fa-envelope"></i></a>
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fas fa-home"></i></a>
-            <a href="#"><i class="fas fa-graduation-cap"></i></a>
-          </div>
+          <p><strong>Research Interests:</strong> Electric drive systems, predictive maintenance, machine learning for energy optimization.</p>
         </div>
       </div>
 
-      <!-- Background and Research -->
-      <div class="faculty-details">
-        <div class="faculty-background">
-          <h3>Background and Profile</h3>
-          <p><strong>M.S.</strong> student in Computer Science, University of Massachusetts Amherst, USA</p>
-          <p><strong>B.S.</strong> in Mechatronics Engineering, Ho Chi Minh City university of Technology - VNU, Vietnam
-          </p>
-        </div>
-
-        <div class="faculty-research">
-          <h3>Research Group Affiliations</h3>
-          <ul>
-            <li><a href="#">TriTree Research Center</a></li>
-          </ul>
-        </div>
-      </div>
     </div>
+      <div class="card">
+        <img src="images/faculty/faculty_duc_anh_tran.jpg" alt="Anh Duc Tran" class="profile-photo">
+        <div class="card-content">
+          <h3>Anh Duc Tran</h3>
+          <p><strong> Researcher</strong></p>
+          <p>Blending expertise in AI, robotics, and education to build intelligent systems.</p>
+          <p><strong>Background:</strong></p>
+          <ul>
+            <li>M.S. Student — Computer Science, University of Massachusetts Amherst, USA</li>
+            <li>B.S. — Mechatronics Engineering, Ho Chi Minh City University of Technology - VNU, Vietnam</li>
+          </ul>
+          <p><strong>Research Interests:</strong> Robotics, education.</p>
+        </div>
+      </div>
+
   </section>
 
-  <footer class="main-footer">
+  <!-- Footer -->
+  <footer>
     <p>&copy; <span id="year"></span> TriTree Research Center. All rights reserved.</p>
   </footer>
 
-  <script src="script.js"></script>
 </body>
-
 </html>

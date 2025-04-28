@@ -1,59 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TriTree Research Center</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet" />
-
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
+
   <!-- Navigation -->
-  <header class="main-header">
+  <header>
     <nav class="navbar">
-      <div class="logo">TriTree Research Center</div>
+      <div class="logo">TriTree</div>
       <ul class="nav-links" id="navLinks">
-        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html" class="active">Home</a></li>
         <li><a href="people.html">People</a></li>
         <li><a href="publications.html">Publications</a></li>
-        <li><a href="explores.html" class="active">Explores</a></li>
+        <li><a href="explores.html">Explores</a></li>
         <li><a href="blogs.html">Blogs</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
-      <button class="nav-toggle" id="navToggle" onclick="toggleNav()">☰</button>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu">☰</button>
     </nav>
   </header>
 
   <!-- Hero Section -->
   <section class="hero">
-    <div class="hero-text">
-      <h1>Welcome to TriTree Research Center</h1>
-      <p>
-        Where collaboration grows into discovery. Inspired by the Vietnamese proverb:
-        <em>"Một cây làm chẳng nên non, ba cây chụm lại nên hòn núi cao"</em>.
-      </p>
-    </div>
+    <h1>Welcome to TriTree Research Center</h1>
+    <p>Where collaboration grows into discovery. Inspired by the Vietnamese proverb: "Một cây làm chẳng nên non, ba cây chụm lại nên hòn núi cao".</p>
   </section>
 
-  <!-- Main Content -->
-  <section class="content">
+  <!-- About Section -->
+  <section>
     <h2>Our Story</h2>
     <p>
       Inspired by the Vietnamese proverb “Một cây làm chẳng nên non, ba cây chụm lại nên hòn núi cao” — highlighting the power of unity and collaboration — TriTree Research Center was founded on the principle that diverse minds, working together, can achieve extraordinary feats. Much like three trees uniting to form a mighty mountain, our community thrives on shared ideas and collective wisdom.
     </p>
+  </section>
 
+  <!-- Values Section -->
+  <section>
     <h2>Our Values</h2>
-    <ul>
-      <li><strong>Collaboration:</strong> We believe the best breakthroughs happen in teams.</li>
-      <li><strong>Innovation:</strong> We strive to push boundaries and explore uncharted territory.</li>
-      <li><strong>Excellence:</strong> We hold ourselves to the highest standard in every aspect of our work.</li>
-      <li><strong>Inclusivity:</strong> We welcome minds from all fields and backgrounds.</li>
-    </ul>
-
+    <div class="card-container">
+      <div class="card">
+        <h3>Collaboration</h3>
+        <p>We believe the best breakthroughs happen in teams.</p>
+      </div>
+      <div class="card">
+        <h3>Innovation</h3>
+        <p>We strive to push boundaries and explore uncharted territory.</p>
+      </div>
+      <div class="card">
+        <h3>Excellence</h3>
+        <p>We hold ourselves to the highest standards in every aspect of our work.</p>
+      </div>
+      <div class="card">
+        <h3>Inclusivity</h3>
+        <p>We welcome minds from all fields and backgrounds to enrich our research.</p>
+      </div>
+      <div class="card">
+        <h3>Curiosity</h3>
+        <p>We embrace a spirit of exploration and a hunger to learn.</p>
+      </div>
+      <div class="card">
+        <h3>Impact</h3>
+        <p>We focus on creating solutions that make a meaningful difference in the world.</p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Focus Areas -->
+  <section>
     <h2>Our Focus</h2>
     <p>
       TriTree supports research areas from artificial intelligence and robotics to social sciences and humanities. By bridging gaps between disciplines, we nurture innovative solutions that address real-world problems.
@@ -61,10 +81,9 @@
   </section>
 
   <!-- Footer -->
-  <footer class="main-footer">
+  <footer>
     <p>&copy; <span id="year"></span> TriTree Research Center. All rights reserved.</p>
   </footer>
 
-  <script src="script.js"></script>
 </body>
 </html>

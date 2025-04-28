@@ -1,16 +1,11 @@
-// Toggle mobile navigation menu
-function toggleNav() {
-    const navLinks = document.getElementById("navLinks");
-    if (navLinks.style.display === "block") {
-      navLinks.style.display = "none";
-    } else {
-      navLinks.style.display = "block";
-    }
-  }
-  
-  // Dynamically set the current year in the footer
-  const yearSpan = document.getElementById("year");
-  if (yearSpan) {
-    yearSpan.textContent = new Date().getFullYear();
-  }
-  
+// Navigation toggle (NEW clean way)
+document.getElementById('navToggle').addEventListener('click', () => {
+  document.getElementById('navLinks').classList.toggle('active');
+});
+
+// Smooth scroll close menu (NEW addition)
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => {
+    document.getElementById('navLinks').classList.remove('active');
+  });
+});
