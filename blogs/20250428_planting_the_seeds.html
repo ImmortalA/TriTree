@@ -11,16 +11,46 @@
 </head>
 
 <style>
-    section p {
-        text-align: justify;
-    }
+  section p {
+    text-align: justify;
+  }
 
+  .back-button {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 0.8rem 1.5rem;
+    background-color: #006040;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+
+  .back-button:hover {
+    background-color: #014444;
+    transform: translateY(-2px);
+  }
 </style>
 
 <body>
 
   <!-- Navigation -->
-  <div id="navbar-placeholder" data-navbar="../navbar.html"></div>
+  <header>
+    <nav class="navbar">
+      <div class="logo">TriTree Research Center</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../people.html">People</a></li>
+        <li><a href="../publications.html">Publications</a></li>
+        <li><a href="../explores.html">Explores</a></li>
+        <li><a href="../blogs.html">Blogs</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu">☰</button>
+    </nav>
+  </header>
 
   <!-- Blog Content -->
   <section>
@@ -54,11 +84,13 @@
     <p>At TriTree, we believe that together, we can move mountains.</p>
 
     <div style="text-align: center; margin: 2rem 0;">
-        <img src="../images/blogs/20250428_planting_the_seeds/IMG_8332.jpg" alt="Friendship in Taiwan" style="max-width: 60%; height: auto; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+        <img src="../images/blogs/20250428_planting_the_seeds/IMG_8332.jpg" alt="Our Trip Memories" style="max-width: 60%; height: auto; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
         <p style="font-size: 0.9rem; color: #6b7280; margin-top: 0.5rem; text-align: center;"><em>One of our trips.</em></p>
     </div>
 
-    <p><a href="../blogs.html" style="color: #006040; text-decoration: underline;">← Back to Blog List</a></p>
+    <div style="text-align: center; margin-top: 3rem;">
+      <a href="../blogs.html" class="back-button">← Back to Blog List</a>
+    </div>
   </section>
 
   <!-- Footer -->
