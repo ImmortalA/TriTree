@@ -1,18 +1,22 @@
-// Load navbar dynamically
 document.addEventListener('DOMContentLoaded', () => {
-  fetch('navbar.html')
+  const navbarPlaceholder = document.getElementById('navbar-placeholder');
+  let navbarPath = 'navbar.html'; // default
+
+  if (navbarPlaceholder && navbarPlaceholder.dataset.navbar) {
+    navbarPath = navbarPlaceholder.dataset.navbar; // override if specified
+  }
+
+  fetch(navbarPath)
     .then(response => response.text())
     .then(data => {
-      document.getElementById('navbar-placeholder').innerHTML = data;
+      navbarPlaceholder.innerHTML = data;
 
-      // After navbar is loaded, re-bind navigation toggle
+      // Re-bind nav toggle
       const navToggle = document.getElementById('navToggle');
       const navLinks = document.getElementById('navLinks');
-
       if (navToggle && navLinks) {
         navToggle.addEventListener('click', () => {
           navLinks.classList.toggle('active');
-          
         });
         document.querySelectorAll('.nav-links a').forEach(link => {
           link.addEventListener('click', () => {
@@ -21,8 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
       }
     });
-});
-document.addEventListener('DOMContentLoaded', () => {
+
   const yearSpan = document.getElementById('year');
   if (yearSpan) {
     yearSpan.textContent = new Date().getFullYear();
